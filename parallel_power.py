@@ -1,16 +1,3 @@
-def checkPower(resistance,v,p):
-    from math import sqrt
-    
-    totalI=0
-    for j in range(len(resistance)):             
-        iMax=sqrt(p/resistance[j])
-        i=v/resistance[j]
-        totalI+=i
-        if i>iMax:
-            raise ValueError(f'Current exceeded permitted  value for R{j+1}')
-        
-    return totalI
-   
 # Maximum power for each resistor
 rPower=1/4
 
